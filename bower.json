@@ -1,0 +1,25 @@
+{
+  "name": "papermill.in",
+  "version": "0.0.0",
+  "authors": [
+    "Max F. Albrecht <1@178.is>"
+  ],
+  "description": "papermill promo website",
+  "main": "index.html",
+  "keywords": [
+    "papermill"
+  ],
+  "license": "MIT",
+  "homepage": "http://papermill.in",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.0"
+  }
+}
