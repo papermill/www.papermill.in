@@ -28,10 +28,13 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
+          <li><a href="#Goals">Goals</a></li>
+          <li><a href="#Prototypes">Prototypes</a></li>
+          <li><a href="#Examples">Examples</a></li>
+          <li><a href="#Roadmap">Roadmap</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">GitHub</a></li>
         </ul>
-        <h3 class="text-muted">papermill <i>α</i></h3>
+        <h3 class="text-muted">papermill <em>α</em></h3>
       </div>
       
       <div class="jumbotron">
@@ -40,33 +43,127 @@
           Produce long-form text, using the tools powering software developement. 
           Write semantic, structured content and cross-publish for print and web.</p>
         <p>
-          <a class="btn btn-lg btn-info" href="#">Read the Introduction</a>
-          <a class="btn btn-lg btn-info" href="#">Read the Manual</a>
+          <a class="btn btn-lg btn-info" href="#"><i class="icon-book"></i> Read the Introduction</a>
+          <a class="btn btn-lg btn-info" href="#"><i class="icon-book"></i> Read the Manual</a>
         </p>
       </div>
 
       <div class="alert alert-warning alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <strong>Caution!</strong> The papermill framework is in an early alpha stage — the whole project is basically an RFC.
+        <strong>Caution!</strong> The papermill framework is in an early alpha stage — it is basically a RFC.
       </div>
       
-      <div class="row marketing">
+      
+      <div id="Goals" class="row marketing">
+        <h3>Goals</h3>
+        <p class="lead">
+          The framework has 3 primary goals:
+        </p>
+        
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Publication development</h2>
+          <p>Make the <em>mode of production</em> and tools used in (open source) software development more accessible for authors and writers.</p>
+          <ul>
+          <li><strong>Version control</strong></li>
+          <li><strong>Automation</strong>, Continuous integration</li>
+          <li>IDEs: Integrated Development Environments</li>
+          <li>Libraries: reusable modules</li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Cross-media publishing</h2>
+          <p>Produce a document source which is as media-agnostic as possible, in the hopes that if it works for print and web today, it should be possible to adapt to the to-be-invented media of the future.</p>
+
+        </div>
+        
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Long-term reproducibility</h2>
+          <p>Make sure that once written, the source of a publication can be compiled into the desired output 'forever', 
+or at least as long as computers exist.
+          </p>
+        </div>
+
+      </div>
+
+      <div id="Prototypes" class="row marketing">
         <h3>Prototypes</h3>
         <p class="lead">
           Developement happens in the form of small prototypes, parallel to real-world publications produced with it.</p>
         <p class="lead">
           The following list gives an overview of the current prototypes:
         </p>
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Configuration</h2>
+          <p>A configuration file for publications, inspired by <kbd>package.json</kbd></p>
+          <p><a class="btn btn-default" href="#">View details »</a></p>
         </div>
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2><kbd>mill</kbd></h2>
+          <p>A command line utility, capable of compiling a publication according to the configuration.</p>
+          <p><a class="btn btn-default" href="#"><i class="icon-github"></i> View Code »</a></p>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2><kbd>bookstrap</kbd></h2>
+          <p>Template and style for web output. Optimized for readabilty, based on <a href="http://getbootstrap.com">twitter's <kbd>bootstrap</kbd></a></p>
+          <p><a class="btn btn-default" href="#"><i class="icon-github"></i> View Code »</a></p>
+        </div>
+
+      </div>
+
+
+      <div id="Examples" class="row marketing">
+        <h3>Example Publications</h3>
+        <p class="lead">
+          <!-- The following publication were written with <kbd>papermill</kbd>: -->
+        </p>
+        
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>NTS: PhD</h2>
+          <p>Doctoral Thesis of <a href="http://nts.is">Naomi T. Salmon</a> at the Bauhaus-University Weimar (in German).</p>
+          <p>193 pages in print, it deals with the professionalization of today's Artists.</p>
+          <p><a class="btn btn-default" href="http://phd.nts.is"><i class="icon-book"></i> Read it</a>
+             <a class="btn btn-default" href="https://github.com/NTS/PhD"><i class="icon-github"></i> Source</a></p>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Papermill</h2>
+          <p>My Bachelor Thesis about this project.</p>
+          <p>Includes an <strong>Introduction</strong> into the topic as well as a complete end-users <strong>Manual</strong></p>
+          <p><a class="btn btn-default" href="http://ba.178.is"><i class="icon-book"></i> Read it</a>
+            <a class="btn btn-default" href="https://github.com/eins78/Bachelor"><i class="icon-github"></i> Source</a></p>
+          </p>
+        </div>
+
+      </div>
+
+      <div id="Roadmap" class="row marketing">
+        <h3>Roadmap</h3>
+        <p class="lead">
+          These components will be developed in the future, aiming to provide a complete, usable solution for non-technical authors.
+          As always, feedback, ideas and contributions are greatly appreciated.
+        </p>
+        
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2><kbd>API</kbd></h2>
+          <p>Compile publications “in the cloud”, no need to install ~2GB of dependencies.</p>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2><kbd>CI</kbd></h2>
+          <p>Continuous Integration – <em>think <a>Travis CI</a> for books</em>.</p>
+          <p>Will compile the publication whenever there new changes published (for example via <a href="https://github.com">GitHub</a>)</p>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2><kbd>IDE</kbd></h2>
+          <p>Write and publish, all inside a web browser!</p>
+          <p>Will be a hosted service, but also built into the <kbd>CLI</kbd>.</p>
+        </div>
+
 
       </div>
 
