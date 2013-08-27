@@ -1,6 +1,6 @@
 {
   "name": "papermill.in",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Max F. Albrecht <1@178.is>"
   ],
@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.0",
-    "font-awesome": "~3.2.1"
+    "bootstrap-theme-marketeer": "git://github.com/KTE/bootstrap-theme-marketeer.git#gh-pages",
   }
 }
