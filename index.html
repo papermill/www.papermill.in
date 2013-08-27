@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="bower_components/bootstrap/assets/ico/favicon.png">
 
-    <title>papermill — Books as Software</title>
+    <title>papermill (&alpha;lpha) — Books as Software</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -29,87 +29,135 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li><a href="#Goals">Goals</a></li>
-          <li><a href="#Prototypes">Prototypes</a></li>
+          <li><a href="#Tools">Tools</a></li>
           <li><a href="#Examples">Examples</a></li>
           <li><a href="#Roadmap">Roadmap</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contribute</a></li>
         </ul>
-        <h3 class="text-muted">papermill <em>α</em></h3>
+        <h3><span class="brand">papermill</span> <kbd class="text-muted"><em>&alpha;</em></kbd></h3>
       </div>
       
       <div class="jumbotron">
-        <h1>Books as Software</h1>
+        <h1><span class="hidden"><kbd class="brand">papermill</kbd>:<br> </span>“Books as Software”</h1>
         <p class="lead">
-          Produce long-form text, using the tools powering software developement. 
+          Produce long-form text using the tools powering (open source) software developement. <br>
           Write semantic, structured content and cross-publish for print and web.</p>
         <p>
-          <a class="btn btn-lg btn-info" href="#"><i class="icon-book"></i> Read the Introduction</a>
-          <a class="btn btn-lg btn-info" href="#"><i class="icon-book"></i> Read the Manual</a>
+          <a class="btn btn-lg btn-primary" href="http://ba.178.is/Introduction.html"><i class="icon-book"></i> Read the Introduction</a>
+          <a class="btn btn-lg btn-primary" href="http://ba.178.is/Manual.html"><i class="icon-book"></i> Read the Manual</a>
         </p>
       </div>
 
       <div class="alert alert-warning alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <strong>Caution!</strong> The papermill framework is in an early alpha stage — it is basically a RFC.
+        <strong>Caution!</strong> The papermill framework is in an early alpha stage — it is basically a <a href="#Contribute">“Request For Comments”</a>.
       </div>
       
       
       <div id="Goals" class="row marketing">
-        <h3>Goals</h3>
+        <h2>Goals</h2>
         <p class="lead">
           The framework has 3 primary goals:
         </p>
         
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2>Publication development</h2>
+        <div class="col-sm-4">
+          <h3><i class="icon-cogs"></i> Text development</h3>
           <p>Make the <em>mode of production</em> and tools used in (open source) software development more accessible for authors and writers.</p>
-          <ul>
-          <li><strong>Version control</strong></li>
-          <li><strong>Automation</strong>, Continuous integration</li>
-          <li>IDEs: Integrated Development Environments</li>
-          <li>Libraries: reusable modules</li>
-          </ul>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2>Cross-media publishing</h2>
+        <div class="col-sm-4">
+          <h3><i class="icon-random"></i> Cross-media publishing</h3>
           <p>Produce a document source which is as media-agnostic as possible, in the hopes that if it works for print and web today, it should be possible to adapt to the to-be-invented media of the future.</p>
 
         </div>
         
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2>Long-term reproducibility</h2>
+        <div class="col-sm-4">
+          <h3><i class="icon-suitcase"></i> Long-term reproducibility</h3>
           <p>Make sure that once written, the source of a publication can be compiled into the desired output 'forever', 
 or at least as long as computers exist.
           </p>
         </div>
+      </div>
+      <div id="Goals2" class="row marketing">
+        <p class="lead">From these, we can derive our secondary goals:</p>
+          
+        <div class="col-sm-3">
+          <h3 id="plain-text"><i class="icon-align-left"></i> Plain text</h3>
+          <p>If a document is to be written in a binary container (like a <em>Microsoft Word</em> File), the usefulness of a software-like development process are very limited.</p>
+        </div>
+        <div class="col-sm-3">
+          <h3 id="online-offline"><i class="icon-cloud-download"></i> Online &amp; offline</h3>
+          <p>The framework should be usable on a <a href="https://en.wikipedia.org/wiki/Turing_machine"><em>general purpose computer</em></a> without requiring an internet connection.</p>
+        </div>
+        <div class="col-sm-3">
+          <h3 id="simplicity"><i class="icon-check"></i> Simplicity</h3>
+          <p>A complicated system is harder to use, explain and extend than a simple one.</p>
+          <p>A long-term goal is to abstract away as much as possible from the user, while at the same time still providing all the necessary information for those who <em>want</em> or <em>have</em> to know what is happening in the background.</p>
+        </div> 
+        <div class="col-sm-3">
+          <h3 id="freelibreopen-source"><i class="icon-unlock-alt"></i> Free-Libre-Open-Source</h3>
+          <p>Considering the already listed goals, the problems that arise from them and the existing approaches to solve them, we can safely conclude that there is no alternative to use ‘open source’ software, at least for the framework itself.</p>
+          
+        </div>
 
       </div>
 
-      <div id="Prototypes" class="row marketing">
-        <h3>Prototypes</h3>
-        <p class="lead">
-          Developement happens in the form of small prototypes, parallel to real-world publications produced with it.</p>
-        <p class="lead">
-          The following list gives an overview of the current prototypes:
+      <div id="Tools" class="row marketing">
+        <h2>Tools</h2>
+        
+        <h3>Building Blocks</h3>
+        <p class="lead">The most important parts of the framework are existing tools that programmers already love to use.
         </p>
         
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2>Configuration</h2>
+        <div class="col-sm-4">
+          <h2><i class="icon-code-fork"></i> <kbd>git</kbd></h2>
+          <p>Version control that doesn't suck. Free and open source, distributed, fast and efficient.</p>
+          <p><a class="btn btn-default" href="http://git-scm.com">Project website »</a></p>
+        </div>
+        
+        <div class="col-sm-4">
+          <h2><i class="icon-code"></i> <kbd>Markdown</kbd></h2>
+          <p>Markup syntax for humans, easy to type and read.</p>
+          <p><a class="btn btn-default" href="#">Learn More »</a></p>
+        </div>
+        
+        <div class="col-sm-4">
+          <h2><i class="icon-copy"></i> <kbd>(La)TeX</kbd></h2>
+          <p>Typesetting engine</p>
+          <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/TeX">Learn More »</a></p>
+        </div>
+      </div>
+
+      <div id="Tools" class="row marketing">
+        
+        <h3>Prototypes</h3>
+        <p>
+          These building blocks need better integration to be usefull for non-technical authors, 
+          provided in the form of small prototypes. 
+          Their developement happens parallel to real-world publications produced with it.
+        </p>
+        
+        <div class="col-sm-4">
+          <h2><i class="icon-archive"></i> Project</h2>
           <p>A configuration file for publications, inspired by <kbd>package.json</kbd></p>
-          <p><a class="btn btn-default" href="#">View details »</a></p>
+          <p><a class="btn btn-info" href="#">View draft »</a></p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2><kbd>mill</kbd></h2>
+        <div class="col-sm-4">
+          <h2>
+            <span class="icon-stack">
+              <i class="icon-sign-blank icon-stack-base icon-largex"></i>
+              <i class="icon-terminal icon-light icon-largex"></i>
+            </span> <kbd>mill</kbd>
+           </h2>
           <p>A command line utility, capable of compiling a publication according to the configuration.</p>
-          <p><a class="btn btn-default" href="#"><i class="icon-github"></i> View Code »</a></p>
+          <p><a class="btn btn-success" href="#"><i class="icon-github"></i> View Code »</a></p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2><kbd>bookstrap</kbd></h2>
+        <div class="col-sm-4">
+          <h2><i class="icon-file-text"></i> <kbd>bookstrap</kbd></h2>
           <p>Template and style for web output. Optimized for readabilty, based on <a href="http://getbootstrap.com">twitter's <kbd>bootstrap</kbd></a></p>
-          <p><a class="btn btn-default" href="#"><i class="icon-github"></i> View Code »</a></p>
+          <p><a class="btn btn-success" href="#"><i class="icon-github"></i> View Code »</a></p>
         </div>
 
       </div>
@@ -121,15 +169,15 @@ or at least as long as computers exist.
           <!-- The following publication were written with <kbd>papermill</kbd>: -->
         </p>
         
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-sm-4">
           <h2>NTS: PhD</h2>
           <p>Doctoral Thesis of <a href="http://nts.is">Naomi T. Salmon</a> at the Bauhaus-University Weimar (in German).</p>
-          <p>193 pages in print, it deals with the professionalization of today's Artists.</p>
+          <p>193 pages in print, it deals with the professionalization process of contemporary artists.</p>
           <p><a class="btn btn-default" href="http://phd.nts.is"><i class="icon-book"></i> Read it</a>
              <a class="btn btn-default" href="https://github.com/NTS/PhD"><i class="icon-github"></i> Source</a></p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-sm-4">
           <h2>Papermill</h2>
           <p>My Bachelor Thesis about this project.</p>
           <p>Includes an <strong>Introduction</strong> into the topic as well as a complete end-users <strong>Manual</strong></p>
@@ -147,19 +195,18 @@ or at least as long as computers exist.
           As always, feedback, ideas and contributions are greatly appreciated.
         </p>
         
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2><kbd>API</kbd></h2>
+        <div class="col-sm-4">
+          <h2><i class="icon-cloud"></i> <abbr title="Application Programming Interface">API</abbr></h2>
           <p>Compile publications “in the cloud”, no need to install ~2GB of dependencies.</p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2><kbd>CI</kbd></h2>
-          <p>Continuous Integration – <em>think <a>Travis CI</a> for books</em>.</p>
-          <p>Will compile the publication whenever there new changes published (for example via <a href="https://github.com">GitHub</a>)</p>
+        <div class="col-sm-4">
+          <h2><i class="icon-truck icon-flip-horizontal"></i> <abbr title="Continuous Integration">CI</abbr></h2>
+          <p>Will compile the publication whenever there new changes published – <em>think <a>Travis CI</a> for books</em>.</p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
-          <h2><kbd>IDE</kbd></h2>
+        <div class="col-sm-4">
+          <h2><i class="icon-home"></i> <abbr title="Integrated Development Environment">IDE</abbr></h2>
           <p>Write and publish, all inside a web browser!</p>
           <p>Will be a hosted service, but also built into the <kbd>CLI</kbd>.</p>
         </div>
@@ -167,8 +214,18 @@ or at least as long as computers exist.
 
       </div>
 
+      <div id="Contribute" class="row marketing">
+        <h3>Contribute</h3>
+        <p class="lead">
+          Everything is Open Source, including the documentation and this website. 
+        </p>
+        <p>
+          Make it better by just writing me, filing issues or proposing changes on github or donating <i class="icon-bitcoin"></i><span class="hidden">B</span>itcoin.
+        </p>
+              </div>
+
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; <kbd class="brand">papermill</kbd> 2013 — <a href="#"><i class="icon-code-fork"></i> Fork this website</a></p>
       </div>
 
     </div> <!-- /container -->
