@@ -5,6 +5,10 @@ span.icon-stack {
   font-size: 0.5em;
   vertical-align: -15%;
 }
+.jumbotron .btn {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
 /* from here on the style is from <http://getbootstrap.com/examples/jumbotron-narrow/> 
 
   TODO: costumize
